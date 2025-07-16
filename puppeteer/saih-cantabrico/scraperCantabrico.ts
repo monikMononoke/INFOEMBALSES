@@ -102,9 +102,9 @@ async function scrapeCantabrico(): Promise<ZonaHidrologica> {
 
 scrapeCantabrico()
   .then((data) => {
-    fs.writeFileSync('tabla_embalses.json', JSON.stringify(data, null, 2));
+    fs.writeFileSync('embalsesCantabrico.json', JSON.stringify(data, null, 2));
 
-    console.log('Datos guardados en tabla_embalses.json');
+    console.log('Datos guardados en embalsesCantabrico.json');
   })
   .catch((error) => {
     console.error('Error al extraer los datos:', error);
